@@ -1,5 +1,9 @@
+import styles from './Footer.module.css'
+
 export const Footer = () => {
     return(
-        <h2>Footer</h2>
+        <footer className={styles.rodape}>
+            <p>Todos os direitos reservados</p>
+        </footer>
     )
 }

@@ -1,5 +1,9 @@
+import styles from  './Header.module.css'
+
 export const Header = () => {
     return(
-        <h2>Header</h2>
+        <header className={styles.cabecalho}>
+            <h1>WebMechanic</h1>
+        </header>
     )
 }
