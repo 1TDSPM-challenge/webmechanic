@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+
 import LogoImg from "../assets/logo-light.png";
+import { Button } from "./Button";
 
 const HeaderContainer = styled.header`
     background-color: rgb(0, 0, 0, 0.1);
@@ -41,10 +43,11 @@ const Header = () => {
                 <NavLink to="/contato">Contato</NavLink>
             </Nav>
             <Nav>
-
+                <Button tipo={1}>Seu Perfil</Button>
+                <Button tipo={1}>Entre</Button>
             </Nav>
         </HeaderContainer>
     );
 }
 
-export default Header;
+export default Header;w
