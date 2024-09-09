@@ -27,6 +27,8 @@ const GlobalStyle = createGlobalStyle`
     
     body {
         font-family: 'Inter', sans-serif;
+        background-color: #255C99;
+        color: #D8E4FF;
     }
 `
 
