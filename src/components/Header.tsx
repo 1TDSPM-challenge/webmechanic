@@ -31,10 +31,32 @@ const Nav2 = styled.nav`
     padding-right: 40px;
 `
 
-const NavLink = styled(Link) `
+const NavLink = styled(Link)`
     font-weight: bold;
     text-decoration: none;
     color: #D8E4FF;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: #ffffff;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1.5px;
+        background-color: #D8E4FF;
+        transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
 `
 
 const Header = () => {
