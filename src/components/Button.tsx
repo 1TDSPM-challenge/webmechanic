@@ -23,5 +23,6 @@ export const Button = styled.button<ButtonProps>`
             props.tipo === 2 ? "#84a2e6" : 
             "#111111"};
     }
+    cursor: pointer;
 `
 

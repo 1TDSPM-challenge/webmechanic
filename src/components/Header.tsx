@@ -12,7 +12,6 @@ const HeaderContainer = styled.header`
     padding: 10px;
     height: 100px;
     width: 100%;
-
 `
 
 const Logo = styled.img`
@@ -26,7 +25,14 @@ const Nav = styled.nav`
     gap: 40px;
 `
 
+const Nav2 = styled.nav`
+    display: flex;
+    gap: 40px;
+    padding-right: 40px;
+`
+
 const NavLink = styled(Link) `
+    font-weight: bold;
     text-decoration: none;
     color: #D8E4FF;
 `
@@ -42,12 +48,12 @@ const Header = () => {
                 <NavLink to="/equipe">Equipe</NavLink>
                 <NavLink to="/contato">Contato</NavLink>
             </Nav>
-            <Nav>
-                <Button tipo={1}>Seu Perfil</Button>
-                <Button tipo={1}>Entre</Button>
-            </Nav>
+            <Nav2>
+                <Button tipo={2}>Seu Perfil</Button>
+                <Button tipo={2}>Entre</Button>
+            </Nav2>
         </HeaderContainer>
     );
 }
 
-export default Header;w
+export default Header;
