@@ -5,38 +5,38 @@ import LogoImg from "../assets/logo-light.png";
 import { Button } from "./Button";
 
 const HeaderContainer = styled.header`
-    background-color: rgb(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    height: 100px;
+    padding: 2vh 5vw;
+    height: 15vh;
     width: 100%;
-`
+`;
 
 const Logo = styled.img`
-    height: 80px;
+    height: 13vh;
     width: auto;
-    margin-left: 40px;
-`
+`;
 
 const Nav = styled.nav`
     display: flex;
-    gap: 40px;
-`
+    gap: 5vw;
+`;
 
 const Nav2 = styled.nav`
     display: flex;
-    gap: 40px;
-    padding-right: 40px;
-`
+    gap: 5vw;
+    padding-right: 2vw;
+`;
 
 const NavLink = styled(Link)`
     font-weight: bold;
     text-decoration: none;
     color: #D8E4FF;
     position: relative;
-    padding-bottom: 5px;
+    padding-bottom: 0.5vh;
+    font-size: 1rem;
     transition: color 0.3s ease;
 
     &:hover {
@@ -49,7 +49,7 @@ const NavLink = styled(Link)`
         left: 0;
         bottom: 0;
         width: 0;
-        height: 1.5px;
+        height: 0.3vh;
         background-color: #D8E4FF;
         transition: width 0.3s ease;
     }
@@ -57,7 +57,7 @@ const NavLink = styled(Link)`
     &:hover::after {
         width: 100%;
     }
-`
+`;
 
 const Header = () => {
     return (
@@ -76,6 +76,6 @@ const Header = () => {
             </Nav2>
         </HeaderContainer>
     );
-}
+};
 
 export default Header;
