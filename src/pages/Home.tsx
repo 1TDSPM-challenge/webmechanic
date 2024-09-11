@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ImgBanner from '../assets/banner.jpg';
+import { ButtonSaibaMais } from "../components/Button";
 
 const Banner = styled.img`
     width: 100vw;
@@ -40,6 +41,25 @@ const TextoSecundario = styled.p`
     color: #255C99;
 `;
 
+// mexer na responsividade depois
+const BtnContainer = styled.div`
+    position: absolute;
+    top: 82vh;
+    right: 5vw;
+
+    @media (max-width: 900px) {
+        top: 50vh;
+    };
+
+    @media (max-width: 600px) {
+        top: 30vh;
+    };
+
+    @media (max-width: 400px) {
+        top: 25vh;
+    };
+`;
+
 const Container = styled.div`
     display: flex;
     justify-content: center;
@@ -64,6 +84,9 @@ const Home = () => {
                 <TextoPrincipal>CONHEÇA NOSSOS</TextoPrincipal>
                 <TextoSecundario>PLANOS DE SEGURO</TextoSecundario>
             </TextoImagemContainer>
+            <BtnContainer>
+                <ButtonSaibaMais>Saiba Mais</ButtonSaibaMais>
+            </BtnContainer>
             <Container>
                 <TituloSecao>Por que contratar a WebMechanic?</TituloSecao>
                 <p>Aqui nós pensamos 100% nos clientes, trazendo diversos<br />

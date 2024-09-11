@@ -26,3 +26,33 @@ export const Button = styled.button<ButtonProps>`
     cursor: pointer;
 `
 
+export const ButtonSaibaMais = styled.button`
+    background-color: #255C99;
+    color: white;
+    border: none;
+    padding: 0.6rem 3rem;
+    font-size: 1.2rem;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: background-color 0.3s ease;
+    position: relative;
+    border-radius: 50px;
+    
+    &:hover {
+        background-color: #1B4C7A;
+    }
+
+    &::after {
+        content: "→";
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+    }
+
+    &:hover::after {
+        transform: translateX(5px);
+    }
+`;
