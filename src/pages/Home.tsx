@@ -118,10 +118,29 @@ const Home = () => {
             <Container>
                 <TituloSecao>Principais Planos</TituloSecao>
                 <CardsContainer>
-                    <Card titulo="Plano Comum" texto="Ideal para proteção básica com custos reduzidos." textobtn="Saiba Mais" />
-                    <Card titulo="Plano Bronze" texto="Com algumas coberturas extras para maior proteção." textobtn="Saiba Mais" />
-                    <Card titulo="Plano Prata" texto="Cobertura ampliada com assistência inclusa." textobtn="Saiba Mais" />
-                    <Card titulo="Plano Ouro" texto="Cobertura total com serviços premium para veículos de alto padrão." textobtn="Saiba Mais" />
+                    <Card
+                        titulo="Plano Comum" 
+                        texto=" Ideal para quem busca proteção essencial do carro com um custo acessível e coberturas básicas para o dia a dia." 
+                        textobtn="Saiba Mais" 
+                        tipoplano="comum"
+                    />
+                    <Card
+                        titulo="Plano Bronze" 
+                        texto="Oferecendo coberturas essenciais com alguns benefícios extras, ideal para quem quer mais segurança sem aumentar muito os custos." 
+                        textobtn="Saiba Mais"
+                        tipoplano="bronze"
+                    />
+                    <Card 
+                        titulo="Plano Prata" 
+                        texto="Com coberturas ampliadas, incluindo assistência a terceiros mais completa e benefícios adicionais, perfeito para quem busca mais tranquilidade no dia a dia." 
+                        textobtn="Saiba Mais"
+                        tipoplano="prata"
+                    />
+                    <Card
+                        titulo="Plano Ouro"
+                        texto="Oferecendo cobertura total, assistência premium 24 horas, proteção ampliada para terceiros e benefícios exclusivos, ideal para quem quer o máximo de segurança e conveniência." 
+                        textobtn="Saiba Mais"
+                        tipoplano="ouro" />
                 </CardsContainer>
             </Container>
         </>
