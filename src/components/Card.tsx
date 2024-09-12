@@ -27,7 +27,7 @@ const CardContainer = styled.div<{ temImagem: boolean; cor?: string }>`
         left: 0;
         width: 100%;
         height: 10px;
-        background-color: ${({ cor }) => cor || "transparent"};
+        background: ${({ cor }) => cor || "transparent"};
         border-radius: 10px 10px 0 0;
     }
 `;
@@ -66,10 +66,10 @@ const Card = ({ titulo, texto, img, textobtn, tipoplano }: CardProps) => {
     const temImagem = Boolean(img);
     
     const corPlano = {
-        ouro: "#FCD53F",
-        prata: "#b1b1b1",
-        bronze: "#5c4006",
-        comum: "#F2F2F2",
+        ouro: "linear-gradient(90deg, #FCD53F, #FFA500)",
+        prata: "linear-gradient(90deg, #b1b1b1, #d8d8d8)",
+        bronze: "linear-gradient(90deg, #5c4006, #a97142)",
+        comum: "linear-gradient(90deg, #F2F2F2, #D9D9D9)",
     };
 
     const cor = tipoplano ? corPlano[tipoplano] : undefined;

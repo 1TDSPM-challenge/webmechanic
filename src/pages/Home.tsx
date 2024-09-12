@@ -143,6 +143,7 @@ const Home = () => {
                         tipoplano="ouro" />
                 </CardsContainer>
             </Container>
+            <Linha />
         </>
     );
 };
