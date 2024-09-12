@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
     
     body {
         font-family: 'Inter', sans-serif;
-        background: linear-gradient(135deg, #255C99 0%, #1B4C7A 50%, #0F3059 100%);
+        background: linear-gradient(135deg, #255C99 0%, #255C99 30%, #1B4C7A 50%, #0F3059 100%);
         color: #D8E4FF;
         overflow-x: hidden;
     }

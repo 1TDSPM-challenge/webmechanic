@@ -68,7 +68,7 @@ const BtnContainer = styled.div`
     };
 `;
 
-const Container = styled.div`
+const Container = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,6 +93,26 @@ const CardsContainer = styled.div`
     padding: 20px;
     justify-content: center;
 `;
+
+const Contato = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: dashed 1px #D8E4FF;
+    padding: 60px;
+
+    h3 {
+        margin-bottom: 30px;
+        font-size: 1.5rem;
+    }
+
+    p {
+        line-height: 40px;
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+`
 
 const Home = () => {
     return (
@@ -148,6 +168,18 @@ const Home = () => {
             <Linha />
             <Cartao />
             <Linha />
+            <Container>
+                <TituloSecao>Precisa de ajuda? Entre em contato conosco!</TituloSecao>
+                <Contato>
+                    <h3>Nossos contatos:</h3>
+                    <p>
+                        <strong>E-mail:</strong> webmechanic@hotmail.com<br />
+                        <strong>Whatsapp:</strong> (11) 985619925<br />
+                        <strong>Telefone:</strong> 2254-9080
+                    </p>
+                    <ButtonSaibaMais>Fale Conosco</ButtonSaibaMais> 
+                </Contato>
+            </Container>
         </>
     );
 };

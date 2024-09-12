@@ -1,23 +1,24 @@
 import styled from "styled-components";
 import { Button } from "./Button";
 
-const CardContainer = styled.div<{ temImagem: boolean; cor?: string }>`
+const CardContainer = styled.div<{ temImagem: boolean; cor?: string; sombra?: string }>`
     display: flex;
     flex-direction: column;
     justify-content: ${({ temImagem }) => (temImagem ? "flex-start" : "center")};
     background-color: #D8E4FF;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 20px ${({ sombra }) => sombra || 'rgba(0, 0, 0, 0.1)'};
     padding: ${({ temImagem }) => (temImagem ? "0" : "20px")};
     width: 300px;
     height: 400px;
     text-align: center;
     margin: 20px;
     position: relative;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
         transform: translateY(-10px);
+        box-shadow: 0 15px 30px ${({ sombra }) => sombra || 'rgba(0, 0, 0, 0.1)'};
     }
 
     &::before {
@@ -72,10 +73,18 @@ const Card = ({ titulo, texto, img, textobtn, tipoplano }: CardProps) => {
         comum: "linear-gradient(90deg, #F2F2F2, #D9D9D9)",
     };
 
+    const sombraPlano = {
+        ouro: "rgba(252, 214, 63, 0.753)",
+        prata: "rgba(242, 242, 242, 0.5)",
+        bronze: "rgba(92, 64, 6, 0.5)",
+        comum: "rgba(0,0,0,0.1)"
+    };
+
     const cor = tipoplano ? corPlano[tipoplano] : undefined;
+    const sombra = tipoplano ? sombraPlano[tipoplano] : undefined;
 
     return (
-        <CardContainer temImagem={temImagem} cor={cor}>
+        <CardContainer temImagem={temImagem} cor={cor} sombra={sombra}>
             {temImagem && <ImgCard src={img} alt={titulo} />}
             <TituloCard>{titulo}</TituloCard>
             <TextoCard>{texto}</TextoCard>
