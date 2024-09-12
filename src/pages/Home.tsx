@@ -1,6 +1,12 @@
 import styled from "styled-components";
+
 import ImgBanner from '../assets/banner.jpg';
 import { ButtonSaibaMais } from "../components/Button";
+import Linha from "../components/Linha";
+import Card from "../components/Card";
+import ImgCard1 from "../assets/card1.jpg"
+import ImgCard2 from "../assets/card2.jpg"
+import ImgCard3 from "../assets/card3.png"
 
 const Banner = styled.img`
     width: 100vw;
@@ -65,7 +71,8 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 5vh 10vw;
+    margin-top: 40px;
+    padding: 5vh;
     text-align: center;
     width: 100%;
 `;
@@ -74,6 +81,15 @@ const TituloSecao = styled.h2`
     font-size: 3vw;
     font-weight: bold;
     margin-bottom: 5vh;
+`;
+
+const CardsContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
 `;
 
 const Home = () => {
@@ -92,6 +108,21 @@ const Home = () => {
                 <p>Aqui nós pensamos 100% nos clientes, trazendo diversos<br />
                     benefícios e um atendimento especial. Se liga nos nossos<br />
                     serviços:</p>
+                <CardsContainer>
+                    <Card titulo="Pague tipo assinatura" texto="Sem juros e renovação automática." img={ImgCard1} />
+                    <Card titulo="Você decide. Você escolhe." texto="Escolha os serviços que mais lhe convêm." img={ImgCard2} />
+                    <Card titulo="Simples de usar e direto com você." texto="Controle seus planos facilmente no celular." img={ImgCard3} />
+                </CardsContainer>
+            </Container>
+            <Linha />
+            <Container>
+                <TituloSecao>Principais Planos</TituloSecao>
+                <CardsContainer>
+                    <Card titulo="Plano Comum" texto="Ideal para proteção básica com custos reduzidos." textobtn="Saiba Mais" />
+                    <Card titulo="Plano Bronze" texto="Com algumas coberturas extras para maior proteção." textobtn="Saiba Mais" />
+                    <Card titulo="Plano Prata" texto="Cobertura ampliada com assistência inclusa." textobtn="Saiba Mais" />
+                    <Card titulo="Plano Ouro" texto="Cobertura total com serviços premium para veículos de alto padrão." textobtn="Saiba Mais" />
+                </CardsContainer>
             </Container>
         </>
     );
