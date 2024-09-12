@@ -26,8 +26,9 @@ const GlobalStyle = createGlobalStyle`
     
     body {
         font-family: 'Inter', sans-serif;
-        background-color: #255C99;
+        background: linear-gradient(135deg, #255C99 0%, #1B4C7A 50%, #0F3059 100%);
         color: #D8E4FF;
+        overflow-x: hidden;
     }
 `
 

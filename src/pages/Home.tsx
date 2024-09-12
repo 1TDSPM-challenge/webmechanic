@@ -1,12 +1,14 @@
 import styled from "styled-components";
 
-import ImgBanner from '../assets/banner.jpg';
 import { ButtonSaibaMais } from "../components/Button";
 import Linha from "../components/Linha";
 import Card from "../components/Card";
+import Cartao from "../components/Cartao";
+
 import ImgCard1 from "../assets/card1.jpg"
 import ImgCard2 from "../assets/card2.jpg"
 import ImgCard3 from "../assets/card3.png"
+import ImgBanner from '../assets/banner.jpg';
 
 const Banner = styled.img`
     width: 100vw;
@@ -143,6 +145,8 @@ const Home = () => {
                         tipoplano="ouro" />
                 </CardsContainer>
             </Container>
+            <Linha />
+            <Cartao />
             <Linha />
         </>
     );
