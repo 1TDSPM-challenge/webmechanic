@@ -71,8 +71,12 @@ const Header = () => {
                 <NavLink to="/contato">Contato</NavLink>
             </Nav>
             <Nav2>
-                <Button tipo={2}>Seu Perfil</Button>
-                <Button tipo={2}>Entre</Button>
+                <Link to="/perfil">
+                    <Button tipo={2}>Seu Perfil</Button>
+                </Link>
+                <Link to="/login">
+                    <Button tipo={2}>Entre</Button>
+                </Link>
             </Nav2>
         </HeaderContainer>
     );
