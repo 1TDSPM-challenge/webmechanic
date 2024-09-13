@@ -23,9 +23,9 @@ const Equipe: React.FC = () => {
 
   return (
     <div className="carousel">
-      <button onClick={handlePrev}>Anterior</button>
+      <button id='anterior' onClick={handlePrev}>🠔</button>
       <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
-      <button onClick={handleNext}>Próximo</button>
+      <button id='proximo' onClick={handleNext}>🠖</button>
     </div>
   );
 };
