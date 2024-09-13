@@ -127,16 +127,16 @@ const Footer = () => {
                     </Coluna>
                 </FooterLinksWrapper>
             </FooterLinksContainer>
-            <div>
+            <FooterLinksContainer>
                 <img src={Logo} alt="Logo" />
                 <p>Copyright © 2024 WebMechanic Solutions. Todos os direitos reservados.</p>
-            </div>
+            </FooterLinksContainer>
             <FooterLinksContainer>
                 <h3>Redes Sociais</h3>
                 <SocialLinks>
                     <li><i className="fi fi-brands-instagram"></i></li>
-                    <li><i className="fi fi-brands-facebook"></i></li>
-                    <li><i className="fi fi-brands-twitter"></i></li>
+                    <li><i className="fi fi-brands-whatsapp"></i></li>
+                    <li><i className="fi fi-brands-github"></i></li>
                 </SocialLinks>
             </FooterLinksContainer>
         </FooterContainer>
