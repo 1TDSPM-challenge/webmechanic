@@ -31,6 +31,13 @@ const FooterContainer = styled.footer`
             }
         }
     }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
 `;
 
 const FooterLinksContainer = styled.div`
@@ -41,11 +48,20 @@ const FooterLinksContainer = styled.div`
     h3 {
         margin-bottom: 10px;
     }
+
+    @media (max-width: 768px) {
+        margin-bottom: 20px;
+    }
 `;
 
 const FooterLinksWrapper = styled.div`
     display: flex;
     gap: 40px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+    }
 `;
 
 const SocialLinks = styled.ul`
@@ -68,6 +84,10 @@ const SocialLinks = styled.ul`
             }
         }
     }
+
+    @media (max-width: 768px) {
+        gap: 20px;
+    }
 `;
 
 const Coluna = styled.ul`
@@ -77,6 +97,10 @@ const Coluna = styled.ul`
 
     li {
         list-style: none;
+    }
+
+    @media (max-width: 768px) {
+        gap: 15px;
     }
 `;
 
@@ -105,6 +129,10 @@ const FooterLink = styled(Link)`
 
     &:hover::after {
         width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 1rem;
     }
 `;
 

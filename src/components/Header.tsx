@@ -12,22 +12,55 @@ const HeaderContainer = styled.header`
     padding: 2vh 5vw;
     height: 15vh;
     width: 100%;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        height: auto;
+        padding: 1vh 3vw;
+    }
 `;
 
 const Logo = styled.img`
     height: 13vh;
     width: auto;
+
+    @media (max-width: 768px) {
+        height: 10vh;
+        margin-bottom: 1vh;
+    }
 `;
 
 const Nav = styled.nav`
     display: flex;
     gap: 5vw;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 2vh;
+        align-items: center;
+        margin-bottom: 1vh;
+    }
+
+    @media (max-width: 480px) {
+        gap: 1vh;
+    }
 `;
 
 const Nav2 = styled.nav`
     display: flex;
     gap: 5vw;
     padding-right: 2vw;
+
+    @media (max-width: 768px) {
+        gap: 2vw;
+        padding-right: 0;
+        margin-bottom: 1vh;
+    }
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        gap: 1vh;
+    }
 `;
 
 const NavLink = styled(Link)`
@@ -56,6 +89,14 @@ const NavLink = styled(Link)`
 
     &:hover::after {
         width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 0.8rem;
     }
 `;
 
