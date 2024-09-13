@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import '../styles/Equipe.modules.css';
+
 import Murillo from '../img/banner-murillo.png';
 import Vitor from '../img/banner-vitor.png';
 import Samuel from '../img/banner-samuel.png';
 
 const images = [Murillo, Vitor, Samuel];
 
-const Equipe: React.FC = () => {
+const Equipe = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {

@@ -8,7 +8,7 @@ import Apolice from "./pages/Apolice";
 import Seguros from "./pages/Seguros";
 import Sinistros from "./pages/Sinistros";
 import Equipe from "./pages/Equipe";
-import Contato from "./pages/Contato";
+import PaginaContato from "./pages/PaginaContato";
 import Erro from "./pages/Erro";
 
 export const router = createBrowserRouter([
@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
             { path: "seguros", element: <Seguros /> },
             { path: "sinistros", element: <Sinistros /> },
             { path: "equipe", element: <Equipe /> },
-            { path: "contato", element: <Contato /> },
+            { path: "contato", element: <PaginaContato /> },
         ],
         errorElement: <Erro />,
     },

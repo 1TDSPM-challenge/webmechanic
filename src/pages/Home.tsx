@@ -1,9 +1,11 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 import { ButtonSaibaMais } from "../components/Button";
 import Linha from "../components/Linha";
 import Card from "../components/Card";
 import Cartao from "../components/Cartao";
+import Contato from "../components/Contato";
 
 import ImgCard1 from "../assets/card1.jpg"
 import ImgCard2 from "../assets/card2.jpg"
@@ -13,6 +15,7 @@ import ImgBanner from '../assets/banner.jpg';
 const Banner = styled.img`
     width: 100vw;
     height: auto;
+    z-index: -3;
 `;
 
 const TextoImagemContainer = styled.div`
@@ -94,26 +97,6 @@ const CardsContainer = styled.div`
     justify-content: center;
 `;
 
-const Contato = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: dashed 1px #D8E4FF;
-    padding: 60px;
-
-    h3 {
-        margin-bottom: 30px;
-        font-size: 1.5rem;
-    }
-
-    p {
-        line-height: 40px;
-        font-size: 1.2rem;
-        margin-bottom: 30px;
-    }
-`
-
 const Home = () => {
     return (
         <>
@@ -123,7 +106,9 @@ const Home = () => {
                 <TextoSecundario>PLANOS DE SEGURO</TextoSecundario>
             </TextoImagemContainer>
             <BtnContainer>
-                <ButtonSaibaMais>Saiba Mais</ButtonSaibaMais>
+                <Link to="/seguros">
+                    <ButtonSaibaMais>Saiba Mais</ButtonSaibaMais>
+                </Link>
             </BtnContainer>
             <Container>
                 <TituloSecao>Por que contratar a WebMechanic?</TituloSecao>
@@ -170,15 +155,7 @@ const Home = () => {
             <Linha />
             <Container>
                 <TituloSecao>Precisa de ajuda? Entre em contato conosco!</TituloSecao>
-                <Contato>
-                    <h3>Nossos contatos:</h3>
-                    <p>
-                        <strong>E-mail:</strong> webmechanic@hotmail.com<br />
-                        <strong>Whatsapp:</strong> (11) 985619925<br />
-                        <strong>Telefone:</strong> 2254-9080
-                    </p>
-                    <ButtonSaibaMais>Fale Conosco</ButtonSaibaMais> 
-                </Contato>
+                <Contato />
             </Container>
         </>
     );
