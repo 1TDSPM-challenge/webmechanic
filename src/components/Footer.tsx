@@ -59,6 +59,7 @@ const SocialLinks = styled.ul`
             font-size: 24px;
             color: #D8E4FF;
             transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+            cursor: pointer;
 
             &:hover {
                 color: #ffffff;
