@@ -131,7 +131,7 @@ const FooterLink = styled(Link)`
         width: 100%;
     }
 
-    @media (max-width: 768px) {
+        @media (max-width: 768px) {
         font-size: 1rem;
     }
 `;

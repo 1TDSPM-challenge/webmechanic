@@ -7,38 +7,46 @@ import Card from "../components/Card";
 import Cartao from "../components/Cartao";
 import Contato from "../components/Contato";
 
-import ImgCard1 from "../assets/card1.jpg"
-import ImgCard2 from "../assets/card2.jpg"
-import ImgCard3 from "../assets/card3.png"
+import ImgCard1 from "../assets/card1.jpg";
+import ImgCard2 from "../assets/card2.jpg";
+import ImgCard3 from "../assets/card3.png";
 import ImgBanner from '../assets/banner.jpg';
 
-const Banner = styled.img`
+const BannerContainer = styled.div`
+    position: relative;
     width: 100vw;
-    height: auto;
-    z-index: -3;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(${ImgBanner});
+    background-size: cover;
+    background-position: center;
+    padding-top: 200px;
+
+    @media (max-width: 900px) {
+        height: 80vh;
+    }
+
+    @media (max-width: 600px) {
+        height: 60vh;
+    }
 `;
 
 const TextoImagemContainer = styled.div`
-    position: absolute;
-    top: 50vh;
-    left: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     color: white;
     font-weight: bold;
-    line-height: 1;
+    text-align: left;
+    line-height: 0.8;
     font-size: 10vw;
     letter-spacing: 3px;
     font-family: "Bebas Neue", sans-serif;
 
     @media (max-width: 900px) {
-        top: 36vh;
-    };
-
-    @media (max-width: 600px) {
-        top: 30vh;
-    };
-
-    @media (max-width: 400px) {
-        top: 25vh;
+        padding: 30px;
     };
 `;
 
@@ -52,22 +60,15 @@ const TextoSecundario = styled.p`
     color: #255C99;
 `;
 
-// mexer na responsividade depois
 const BtnContainer = styled.div`
-    position: absolute;
-    top: 82vh;
-    right: 5vw;
+    margin-top: 20px;
 
     @media (max-width: 900px) {
-        top: 50vh;
+        margin-top: 15px;
     };
 
     @media (max-width: 600px) {
-        top: 30vh;
-    };
-
-    @media (max-width: 400px) {
-        top: 25vh;
+        margin-top: 10px;
     };
 `;
 
@@ -86,6 +87,14 @@ const TituloSecao = styled.h2`
     font-size: 3vw;
     font-weight: bold;
     margin-bottom: 5vh;
+
+    @media (max-width: 900px) {
+        font-size: 5vw;
+    }
+
+    @media (max-width: 600px) {
+        font-size: 6vw;
+    }
 `;
 
 const CardsContainer = styled.div`
@@ -95,21 +104,27 @@ const CardsContainer = styled.div`
     gap: 20px;
     padding: 20px;
     justify-content: center;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 30px;
+    }
 `;
 
 const Home = () => {
     return (
         <>
-            <Banner src={ImgBanner} alt="Banner" />
-            <TextoImagemContainer>
-                <TextoPrincipal>CONHEÇA NOSSOS</TextoPrincipal>
-                <TextoSecundario>PLANOS DE SEGURO</TextoSecundario>
-            </TextoImagemContainer>
-            <BtnContainer>
-                <Link to="/seguros">
-                    <ButtonSaibaMais>Saiba Mais</ButtonSaibaMais>
-                </Link>
-            </BtnContainer>
+            <BannerContainer>
+                <TextoImagemContainer>
+                    <TextoPrincipal>CONHEÇA NOSSOS</TextoPrincipal>
+                    <TextoSecundario>PLANOS DE SEGURO</TextoSecundario>
+                </TextoImagemContainer>
+                    <BtnContainer>
+                        <Link to="/seguros">
+                            <ButtonSaibaMais>Saiba Mais</ButtonSaibaMais>
+                        </Link>
+                    </BtnContainer>
+            </BannerContainer>
             <Container>
                 <TituloSecao>Por que contratar a WebMechanic?</TituloSecao>
                 <p>Aqui nós pensamos 100% nos clientes, trazendo diversos<br />
