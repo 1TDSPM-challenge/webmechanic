@@ -29,7 +29,8 @@ const Contato = () => {
             <p>
                 <strong>E-mail:</strong> webmechanic@hotmail.com<br />
                 <strong>Whatsapp:</strong> (11) 985619925<br />
-                <strong>Telefone:</strong> 2254-9080
+                <strong>Telefone:</strong> 2254-9080<br />
+                <strong>Repositório Github:</strong> https://github.com/1TDSPM-challenge/porto-seguro-front
             </p>
             <Link to="/contato">
                 <ButtonSaibaMais>Fale Conosco</ButtonSaibaMais>
